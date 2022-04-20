@@ -1,0 +1,37 @@
+.heading {
+  border-radius: 25px;
+  border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+
+}
+.form {
+  border-radius: 20px;
+  box-shadow: -6px 9px 13px -1px rgba(34, 60, 80, 0.19);
+}
+.output {
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: -6px 9px 13px -1px rgba(34, 60, 80, 0.19);
+}
+.product-list {
+  height: 400px;
+}
+.list-text {
+  position: absolute;
+  left: 33%;
+  top: 40%;
+  color:rgb(195, 195, 195);
+  cursor: default;
+}
+.product-item {
+  font-size: 20px;
+  color: #198754;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(225, 219, 219, 0.363);
+}
+.list-btn {
+  left: 120px
+}

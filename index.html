@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product-list</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container-lg container-fluid">
+    <h1 class="heading text-center text-white py-5 px-2 mt-4 bg-success">
+      Make product list in our site
+    </h1>
+    <div class="main row justify-content-around mt-5">
+      <form class="form col-11 col-sm-10 col-md-8 col-lg-5 p-5 bg-light h-100 mb-5 mb-lg-0" action="https://echo.htmlacademy.ru" method="get">
+        <label class="form-label text-success fw-bold fs-5" for="form-input">Write your product</label>
+        <input class="form-input form-control fw-bold m-0" id="form-input" type="text" name="product" placeholder="Apple" autocomplete="off">
+        <p class="warning-text text-warning position-absolute"></p>
+        <button class="form-btn btn btn-success fw-bold text-uppercase px-4 mt-5" type="submit">Add list</button>
+      </form>
+      <output class="output col-11 col-sm-10 col-md-8 col-lg-5 bg-light p-4 position-relative ">
+        <ol class="product-list list-unstyled overflow-auto"></ol>
+        <p class="list-text h1 text-center">List empty</p>
+        <button class="remove-btn btn btn-success fw-bold position-absolute bottom-0 mb-4">Remove</button>
+        <button class="list-btn btn btn-success fw-bold position-absolute bottom-0 mb-4">Clear</button>
+      </output>
+    </div>
+  </div>
+
+
+  <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
