@@ -14,12 +14,18 @@
       Make product list in our site
     </h1>
     <div class="main row justify-content-around mt-5">
-      <form class="form col-11 col-sm-10 col-md-8 col-lg-5 p-5 bg-light h-100 mb-5 mb-lg-0" action="https://echo.htmlacademy.ru" method="get">
-        <label class="form-label text-success fw-bold fs-5" for="form-input">Write your product</label>
-        <input class="form-input form-control fw-bold m-0" id="form-input" type="text" name="product" placeholder="Apple" autocomplete="off">
-        <p class="warning-text text-warning position-absolute"></p>
-        <button class="form-btn btn btn-success fw-bold text-uppercase px-4 mt-5" type="submit">Add list</button>
-      </form>
+      <div class="main-left col-11 col-sm-10 col-md-8 col-lg-5">
+        <form class="form  p-5 bg-light mb-5 mb-lg-0" action="https://echo.htmlacademy.ru" method="get">
+          <label class="form-label text-success fw-bold fs-5" for="form-input">Write your product</label>
+          <input class="form-input form-control fw-bold m-0" id="form-input" type="text" name="product" placeholder="Apple" autocomplete="off">
+          <p class="warning-text text-warning position-absolute"></p>
+          <button class="form-btn btn btn-success fw-bold text-uppercase px-4 mt-5" type="submit">Add list</button>
+        </form>
+        <div class="main-left-bottom bg-light p-4 mt-4 overflow-auto">
+          <h3 class="text-success m-0">Last lists</h3>
+          <ul class="last-lists list-unstyled"></ul>
+        </div>
+      </div>
       <output class="output col-11 col-sm-10 col-md-8 col-lg-5 bg-light p-4 position-relative ">
         <ol class="product-list list-unstyled overflow-auto"></ol>
         <p class="list-text h1 text-center">List empty</p>

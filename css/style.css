@@ -8,6 +8,20 @@
   border-radius: 20px;
   box-shadow: -6px 9px 13px -1px rgba(34, 60, 80, 0.19);
 }
+.main-left-bottom {
+  height: 230px;
+  border-radius: 20px;
+  box-shadow: -6px 9px 13px -1px rgba(34, 60, 80, 0.19);
+}
+.last-list-item {
+  font-size: 20px;
+  color: #198754;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(225, 219, 219, 0.363);
+}
 .output {
   height: 500px;
   border-radius: 20px;

@@ -1,6 +1,7 @@
 let elInput = document.querySelector("#form-input");
 let warningText = document.querySelector(".warning-text")
 let elBtn = document.querySelector(".form-btn");
+let elLastList = document.querySelector(".last-lists");
 let elList = document.querySelector(".product-list");
 let elListText = document.querySelector(".list-text");
 let elRemoveBtn = document.querySelector(".remove-btn");
@@ -59,7 +60,11 @@ elRemoveBtn.addEventListener("click", () => {
 
 
 elClearBtn.addEventListener("click", () => {
+  let newLiList = document.createElement("li");
+  newLiList.classList.add("last-list-item")
+  newLiList.textContent = productList.join(", ");
+  elLastList.append(newLiList);
   elList.innerHTML = "";
-  productList = [];
   elListText.textContent = "List empty";
+  productList = [];
 })
