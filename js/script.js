@@ -9,6 +9,7 @@ let elClearBtn = document.querySelector(".list-btn");
 
 let newLi;
 let productList = [];
+let lastList = [];
 
 
 elBtn.addEventListener("click", (e) => {
@@ -34,7 +35,7 @@ elBtn.addEventListener("click", (e) => {
     upperText[0] = upperText[0].toUpperCase();
     upperText = upperText.join("");
     newLi.textContent = upperText;
-    productList.push(elInput.value.trim().toLowerCase());
+    productList.push(upperText.toLowerCase());
     elList.append(newLi);
     elInput.value = "";
     newLi.classList.add("product-item");
@@ -60,11 +61,16 @@ elRemoveBtn.addEventListener("click", () => {
 
 
 elClearBtn.addEventListener("click", () => {
-  let newLiList = document.createElement("li");
-  newLiList.classList.add("last-list-item")
-  newLiList.textContent = productList.join(", ");
-  elLastList.append(newLiList);
-  elList.innerHTML = "";
-  elListText.textContent = "List empty";
-  productList = [];
+  if (elList.innerHTML == "") {
+    return
+  }else{
+    let newLiList = document.createElement("li");
+    newLiList.classList.add("last-list-item");
+    lastList.push(productList);
+    newLiList.textContent = productList.join(", ");
+    elLastList.append(newLiList);
+    elList.innerHTML = "";
+    elListText.textContent = "List empty";
+    productList = [];
+  }
 })
