@@ -8,6 +8,9 @@
   border-radius: 20px;
   box-shadow: -6px 9px 13px -1px rgba(34, 60, 80, 0.19);
 }
+#first-add:checked {
+  background-color:#198754 !important;
+}
 .main-left-bottom {
   height: 230px;
   border-radius: 20px;
@@ -23,12 +26,12 @@
   background-color: rgba(225, 219, 219, 0.363);
 }
 .output {
-  height: 500px;
+  height: 570px;
   border-radius: 20px;
   box-shadow: -6px 9px 13px -1px rgba(34, 60, 80, 0.19);
 }
 .product-list {
-  height: 400px;
+  height: 450px;
 }
 .list-text {
   position: absolute;

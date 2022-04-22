@@ -1,4 +1,5 @@
 let elInput = document.querySelector("#form-input");
+let elCheck = document.querySelector("#first-add");
 let warningText = document.querySelector(".warning-text")
 let elBtn = document.querySelector(".form-btn");
 let elLastList = document.querySelector(".last-lists");
@@ -35,8 +36,13 @@ elBtn.addEventListener("click", (e) => {
     upperText[0] = upperText[0].toUpperCase();
     upperText = upperText.join("");
     newLi.textContent = upperText;
-    productList.push(upperText.toLowerCase());
-    elList.append(newLi);
+    if(elCheck.checked){
+      elList.insertBefore(newLi, elList.firstChild);
+      productList.unshift(upperText.toLowerCase())
+    }else{
+      productList.push(upperText.toLowerCase());
+      elList.append(newLi);
+    }
     elInput.value = "";
     newLi.classList.add("product-item");
     newLi.style.color = "";

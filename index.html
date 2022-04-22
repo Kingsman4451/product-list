@@ -15,9 +15,15 @@
     </h1>
     <div class="main row justify-content-around mt-5">
       <div class="main-left col-11 col-sm-10 col-md-8 col-lg-5">
-        <form class="form  p-5 bg-light mb-5 mb-lg-0" action="https://echo.htmlacademy.ru" method="get">
+        <form class="form p-5 bg-light mb-5 mb-lg-0" action="https://echo.htmlacademy.ru" method="get">
           <label class="form-label text-success fw-bold fs-5" for="form-input">Write your product</label>
           <input class="form-input form-control fw-bold m-0" id="form-input" type="text" name="product" placeholder="Apple" autocomplete="off">
+          <div class="input-group mt-3">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" id="first-add" type="checkbox" value="first_add">
+            </div>
+            <label class="form-control fw-bold text-success" for="first-add">Add first to list</label>
+          </div>
           <p class="warning-text text-warning position-absolute"></p>
           <button class="form-btn btn btn-success fw-bold text-uppercase px-4 mt-5" type="submit">Add list</button>
         </form>
