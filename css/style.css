@@ -33,6 +33,9 @@
 .product-list {
   height: 450px;
 }
+.list-item {
+  cursor: pointer;
+}
 .list-text {
   position: absolute;
   left: 33%;

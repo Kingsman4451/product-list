@@ -2,6 +2,7 @@ let elInput = document.querySelector("#form-input");
 let elCheck = document.querySelector("#first-add");
 let warningText = document.querySelector(".warning-text")
 let elBtn = document.querySelector(".form-btn");
+
 let elLastList = document.querySelector(".last-lists");
 let elList = document.querySelector(".product-list");
 let elListText = document.querySelector(".list-text");
@@ -22,35 +23,56 @@ elBtn.addEventListener("click", (e) => {
     elInput.style.borderColor = "#ffc107"
     elInput.value = "";
     return
-  }else{
+  }
+  else{
     elInput.style.borderColor = "#ced4da";
     warningText.style.display = "none";
     warningText.textContent = "";
   }
   
+
   if(elInput.value == ""){
     return;
-  }else{
+  }
+  else{
     newLi = document.createElement("li");
+    newLi.classList.add("list-item")
     let upperText = elInput.value.trim().split("");
     upperText[0] = upperText[0].toUpperCase();
     upperText = upperText.join("");
     newLi.textContent = upperText;
+
     if(elCheck.checked){
       elList.insertBefore(newLi, elList.firstChild);
       productList.unshift(upperText.toLowerCase())
-    }else{
+    }
+    else{
       productList.push(upperText.toLowerCase());
       elList.append(newLi);
     }
+
     elInput.value = "";
     newLi.classList.add("product-item");
     newLi.style.color = "";
   }
+
   if(elList.innerHTML != ""){
     elListText.textContent = "";
-  }else if(elList.innerHTML == ""){
+  }
+  else if(elList.innerHTML == ""){
     elListText.textContent = "List empty";
+  }
+})
+
+
+elList.addEventListener("dblclick", function(evt){
+  if(evt.target != elList){
+    let indexItem = productList.indexOf(evt.target.textContent.toLowerCase())
+    productList.splice(indexItem, 1)
+    elList.removeChild(evt.target);
+    if(productList.length == 0){
+      elListText.textContent = "List empty";
+    }
   }
 })
 
@@ -59,7 +81,8 @@ elRemoveBtn.addEventListener("click", () => {
   if(elList.innerHTML == "") {
     elListText.textContent = "List empty";
     return;
-  }else{
+  }
+  else{
     productList.pop(productList.length - 1);
     elList.removeChild(elList.lastElementChild);
   }
@@ -69,7 +92,8 @@ elRemoveBtn.addEventListener("click", () => {
 elClearBtn.addEventListener("click", () => {
   if (elList.innerHTML == "") {
     return
-  }else{
+  }
+  else{
     let newLiList = document.createElement("li");
     newLiList.classList.add("last-list-item");
     lastList.push(productList);
